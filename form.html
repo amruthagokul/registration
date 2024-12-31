@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<head>
+  <title>student</title>
+</head>
+<body><center>
+  <form action ="{% url 'stud' %}" method="POST" >
+    {% csrf_token %}
+  <div class="card-body">
+      <div class="form-group">
+       <label for="name"> Name:</label>
+        <input type="text" class="form-control" id="name"  name="name">
+      </div>
+      <br>
+     
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" name="email">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="phone"> Phone Number:</label>
+        <input type="text" class="form-control" id="phone" name="phone">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="age"> Age:</label>
+        <input type="text" class="form-control" id="age" name="age">
+      </div>
+      <br>
+      <div class="input-group date" id="reservationdate" data-target-input="nearest">
+        <label for="date">Enrollment Date:</label>
+        <input type="date" class="form-control datetimepicker-input" data-target="#reservationdate" name="date">
+        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+        </div>
+        <br>
+    </div>
+    <label for="exampleSelectRounded0">Course:</label>
+      <select class="custom-select rounded-0" id="exampleSelectRounded0" name="course">
+        <option>python</option>
+        <option>php</option>
+        <option>html</option>
+        <option>javascript</option>
+       
+      </select>
+         </div>
+         <br>
+      </div>
+    </div>
+    <center><button type="SUBMIT">Register</button></center> 
+  </center>
+  </form>
+</body>
+</html>
+
+
+
